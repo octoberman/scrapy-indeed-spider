@@ -17,3 +17,5 @@ build
 .hg
 .git
 .svn
+settings.py
+*.log

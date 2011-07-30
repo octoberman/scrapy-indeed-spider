@@ -6,6 +6,7 @@ import sys
 import MySQLdb
 from scrapy.utils.python import unicode_to_str
 from scrapy.utils.markup import replace_escape_chars, remove_tags
+from indeed.settings import MYSQL 
 
 class IndeedPipeline(object):
     def process_item(self, item, spider):
@@ -24,7 +25,7 @@ class IndeedPipeline(object):
 
 class MysqlInsert(object):
     def __init__(self):
-		db=MySQLdb.connect(user='',passwd="",db="",host='',charset = "utf8", use_unicode = True)
+		db=MySQLdb.connect(user=MYSQL['user'], passwd=MYSQL['passwd'], db=MYSQL['dbname'], host=MYSQL['host'], charset = "utf8", use_unicode = True)
 		self.c=db.cursor()
 		
     def process_item(self, item, spider):

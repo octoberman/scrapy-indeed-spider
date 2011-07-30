@@ -5,8 +5,6 @@ from scrapy.spider import BaseSpider
 from scrapy.http import Request
 import time
 import sys
-
-
 from indeed.items import IndeedItem
 
 

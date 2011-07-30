@@ -1,2 +1,15 @@
-Spider to use with the Scrapy web crawling and scraping Python framework. 
+Spider to use with the Scrapy web crawling and scraping Python framework. Scrapes job listings from Indeed.com and stores in a MySQL DB
 http://scrapy.org/
+
+
+Requires
+---------------
+scrapy
+mysql-python
+
+
+Usage
+---------------
+cp settings.py.example settings.py
+edit settings.py
+> scrapy crawl indeed --logfile=crawl.log
